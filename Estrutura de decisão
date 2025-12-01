@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+int main() {
+  float nota;
+
+  printf("digite a nota entre 0 e 10: ");
+  scanf("%f", &nota);
+
+  if (nota >= 0 && nota <= 10) {
+    printf("nota registrada: %.2f.\n", nota);
+  } 
+  else{
+    printf("valor digitado invalido.\n");
+  }
+
+  return 0;
+}
