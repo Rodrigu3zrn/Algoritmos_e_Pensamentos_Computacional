@@ -1,0 +1,42 @@
+#include <stdio.h>
+
+#define NUM_NOTAS 4
+
+float calcularMedia(float notas[]) {
+  float soma = 0.0;
+  int i;
+  for (i = 0; i < NUM_NOTAS; i++) {
+    soma = soma + notas[i];
+  }
+   
+  return soma / NUM_NOTAS;
+}
+
+// função para encontrar a maior
+float maiorNota(float notas[]) {
+  float maior = notas[0]; 
+  int i;
+   
+  for (i = 1; i < NUM_NOTAS; i++) {
+    if (notas[i] > maior) {
+      maior = notas[i];
+    }
+  }
+   
+  return maior;
+}
+
+// função para encontrar a menor 
+float menorNota(float notas[]) {
+  float menor = notas[0];
+  int i;
+   
+// comparação
+  for (i = 1; i < NUM_NOTAS; i++) {
+    if (notas[i] < menor) {
+      menor = notas[i];
+    }
+  }
+   
+  return menor;
+}
