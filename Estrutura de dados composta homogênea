@@ -1,0 +1,48 @@
+#include <stdio.h>
+
+int main() {
+   
+  int tamanho = 5;
+  float notas[tamanho];
+  int i;
+  float soma = 0.0;
+  float media;
+  float maiorNota;
+  float menorNota;
+
+  for (i = 0; i < tamanho; i++) {
+    printf("digite a nota %d de %d: ", i + 1, tamanho);
+    scanf("%f", &notas[i]);
+  }
+
+  maiorNota = notas[0];
+  menorNota = notas[0];
+  soma = notas[0];
+
+  for (i = 1; i < tamanho; i++) {
+    soma = soma + notas[i];
+
+    if (notas[i] > maiorNota) {
+      maiorNota = notas[i];
+    }
+
+    if (notas[i] < menorNota) {
+      menorNota = notas[i];
+    }
+  }
+   
+  media = soma / tamanho;
+
+  printf("resultados");
+  printf("notas cadastradas: ");
+   
+  for (i = 0; i < tamanho; i++) {
+    printf("%.1f ", notas[i]);
+  }
+   
+  printf("media das notas: %.2f\n", media);
+  printf("maior nota: %.2f\n", maiorNota);
+  printf("menor nota: %.2f\n", menorNota);
+
+  return 0;
+}
