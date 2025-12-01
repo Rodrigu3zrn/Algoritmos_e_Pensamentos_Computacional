@@ -1,0 +1,14 @@
+int main(){
+  int numA, numB;
+
+  printf("escreva o primeiro numero: ");
+  scanf("%d", &numA);
+
+  printf("escreva o segundo numero: ");
+  scanf("%d", &numB);
+
+  printf("o primeiro numero foi: %d\n", numA);
+  printf("o segundo numero foi: %d\n", numB);
+
+  return 0;
+}
